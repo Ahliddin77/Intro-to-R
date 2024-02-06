@@ -1,0 +1,32 @@
+#Ex.12. Create a new vector e2 of earnings replacing level of 
+#earnings by random number from a proper interval. 
+#Calculate mean and median. 
+#Draw a histogram and density plot. 
+#Draw boxplots with respect to education, age and gender. 
+#Calculate mean and median by gender and education.
+#Create a frequency distribution of age with 8 intervals.
+#Use this distribution to create a vector of 8 levels of age (similarly as it was for earnings).
+#Draw a boxplot with respect to this new vector and calculate mean and median of earnings with respect to level
+#of age.
+	e2=1:length(Earnings)
+	for(i in 1:length(Earnings)) {if(Earnings[i]==1) e2[i]=0
+	else e2[i]=sample(((Earnings[i]-2)*1000+1):((Earnings[i]-1)*1000),1)}
+	mean(e2)
+	median(e2)
+	boxplot(e2)
+	hist(e2)
+	boxplot(e2~Age)
+#Ex.13. Define a function f(x) = (x+3)*3^x. Draw a plot of this function. 
+#Find a point (to within 0.1), where this function has a minimum. Draw 
+#a red line on a plot with the value of this minimum.
+	f=function(x) (x+3)*3^x
+	plot(f,-8,-3)
+	z=c(-8, -3)
+	k=c(f(-3.9), f(-3.9))
+	lines(z, k, col = "red")
+	lines(f,-0.012,-3.7)
+#Ex.14. Draw a square with vertices in points (-1,1), (1,1), (1,-1) and (-1,-1).
+#Draw a blue circle inscribed in that square. 
+	plot(c(-1,1,1,-1,-1),c(1,1,-1,-1,1),type="l")
+	t=seq(0.2*pi,length=500)
+	lines(cos(t),sin(t),col="blue")

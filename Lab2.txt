@@ -1,0 +1,46 @@
+#Lab 2
+#Ex.4 Create the vector consisting of 4, 3, 2, 1, 0, using three 
+#different methods.
+	vec <- c(4, 3, 2, 1, 0)
+	print(vec)
+	vec2 <- seq(4,0)
+	print(vec2)
+	vec3 <- 4:0
+	print(vec3)
+#Ex.5 Give the shortest command to create a vector consitsing of cubes 
+#of all natural numbers 
+#from 1 to 30.
+	c(1:30)^3
+#Ex.6 Give the shortest command to create a vector consitsing of squares 
+#of all even numbers 
+#from 1 to 20.
+	w<-c(1:20)
+	w[w%%2 == 0]^2
+#Ex.7 Give the shortest command to calculate the sum of cubes of 
+#all natural numbers from 1 to 95.
+	sum(1:95^3)
+#Ex.8 We make an experiment. We flip a coin n times. We assign 
+#0 to tails and 1 to heads. Then we calculate the mean. Conduct three test
+#for n=10, 100 and 1000 (9 tests totally). For which n the difference between
+#obianed results is the smallest.
+xl=sample(0:1,10,rep=T)
+x2=sample(0:1,10,rep=T)
+x3=sample(0:1,10,rep=T)
+x4=sample(0:1,100,rep=T)
+x5=sample(0:1,100,rep=T) 
+x6=sample(0:1, 100,rep=T)
+x7=sample(0:1, 1000,rep=T)
+x8=sample(0:1, 1000,rep=T) 
+x9=sample(0:1, 1000,rep=T)
+(ml=mean(xl))
+(m2=mean(x2))
+(m3=mean(x3))
+(m4=mean(x4))
+(m5=mean(x5))
+(m6=mean(x6))
+(m7=mean(x7))
+(m8=mean(x8))
+(m9=mean(x9))
+max(c(ml,m2,m3))-min(c(ml,m2,m3))
+max(c(m4,m5,m6))-min(c(m4,m5,m6)) 
+max(c(m7,m8,m9))-min (c (m7, m8, m9))

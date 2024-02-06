@@ -1,0 +1,30 @@
+#Lab3
+#Ex.9. Solve the following system of equalities
+#x+3y-z=5
+#3x-2y+2z=1
+#4x-y+6z=3
+	A <- rbind(c(1, 3, -1), 
+           	   c(3, -2, 2), 
+           	   c(4, -1, 6))
+	B <- c(5, 1, 3)
+	solve(A,B)
+#Ex.10. From data iris (just write iris) calculate the mean of petal width 
+#for all species separetely and jointly.
+	mean(iris$Petal.Width[iris$Species=="setosa"])
+	mean(iris$Petal.Width[iris$Species=="versicolor"])
+	mean(iris$Petal.Width[iris$Species=="virginica"])
+	mean(iris$Petal.Width)
+#Ex.11. Define a function sumdiag(A) which for a given square matrix gives
+#a diagonal matrix, which on the i-th postition of the diagonal have sum of
+#all terms of matrix A which lie on i-th row or column.
+#For example for the matrix 
+matrix(c(3,5,4,9),2,2)
+#it should give
+#diag(c(12,18))
+	sumdiag=function(A) {
+	n=ncol(A)
+	x=1:n
+	for(i in 1:n) x[i]=sum(A[i,])+sum(A[,i])-A[i,i]
+	diag(x)}
+	A<-matrix(c(3,5,4,9),2,2)
+	sumdiag(A)

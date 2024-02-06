@@ -1,0 +1,19 @@
+#Lab 1
+#1) What is bigger e^pi or pi^e?
+	exp(pi) > pi^exp(1)  # e^pi is bigger
+#2) The universe has around 13,8 billion years. How many seconds it is?
+#   Compare it with 20!. Which one is bigger and how many times?		
+	years <- 13800000000
+	seconds <- years * 365 * 24 * 60 * 60
+	print(seconds)
+	seconds < factorial(20) #20! is bigger
+	factorial(20) / seconds #shows how much time bigger
+#3) Which number is bigger: (9^9)^9 or 9^(9^9)? How many digits both numbers have?	
+	9^(9^9) > (9^9)^9 # 9^(9^9) is larger
+	num_digits <- ceiling(9 * log10(9^9))
+	print(num_digits)     #for (9^9)^9
+	num_digits <- ceiling((9^9) * log10(9))
+	print(num_digits) for 9^(9^9)
+
+
+	
